@@ -25,7 +25,7 @@ public class FooBarQixCounter {
     }
 
     public String replaceThreeByFoo(String number) {
-        if(number.contains(THREE)){
+        if (number.contains(THREE)) {
             return number.replaceAll(THREE, FOO);
         }
         return "";
@@ -33,7 +33,7 @@ public class FooBarQixCounter {
     }
 
     public String replaceFiveByBar(String number) {
-        if(number.contains(FIVE)) {
+        if (number.contains(FIVE)) {
             return number.replaceAll(FIVE, BAR);
         }
         return "";
@@ -46,22 +46,43 @@ public class FooBarQixCounter {
         return "";
     }
 
+    public String replaceDigitByCorrespondingConstant(Integer number){
+        String result = "";
+        if(number < 40){
+            result = replaceThreeByFoo(number.toString())
+                    + replaceFiveByBar(number.toString())
+                    + replaceSevenByQix(number.toString());
+
+        }
+        else if(number < 60) {
+            result = replaceFiveByBar(number.toString())
+                    + replaceThreeByFoo(number.toString())
+                    + replaceSevenByQix(number.toString());
+        }
+        else {
+            result = replaceSevenByQix(number.toString())
+                    + replaceFiveByBar(number.toString())
+                    + replaceThreeByFoo(number.toString());
+        }
+        return result.replaceAll("\\d", "");
+    }
+
     public String returnFooIfDivisibleBy3(Integer number) {
-        if(FooBarQixUtils.isMultipleOf(number, 3)){
+        if (FooBarQixUtils.isMultipleOf(number, 3)) {
             return FOO;
         }
         return "";
     }
 
     public String returnFooIfDivisibleBy5(Integer number) {
-        if(FooBarQixUtils.isMultipleOf(number, 5)){
+        if (FooBarQixUtils.isMultipleOf(number, 5)) {
             return BAR;
         }
         return "";
     }
 
     public String returnQixIfDivisibleBy7(Integer number) {
-        if(FooBarQixUtils.isMultipleOf(number, 7)){
+        if (FooBarQixUtils.isMultipleOf(number, 7)) {
             return QIX;
         }
         return "";

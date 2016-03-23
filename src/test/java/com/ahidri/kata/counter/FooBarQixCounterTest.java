@@ -214,4 +214,26 @@ public class FooBarQixCounterTest {
         //then
         assertThat(result).isEmpty();
     }
+
+    @Test
+    public void should_replace_75_by_QixBar(){
+        //given
+
+        //when
+        String result = fooBarQixCounter.replaceDigitByCorrespondingConstant(75);
+
+        //then
+        assertThat(result).isEqualTo("QixBar");
+    }
+
+    @Test
+    public void should_replace_57_by_BarQix(){
+        //given
+
+        //when
+        String result = fooBarQixCounter.replaceDigitByCorrespondingConstant(57);
+
+        //then
+        assertThat(result).isEqualTo("BarQix");
+    }
 }
