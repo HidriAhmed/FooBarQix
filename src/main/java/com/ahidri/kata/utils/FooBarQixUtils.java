@@ -5,7 +5,7 @@ package com.ahidri.kata.utils;
  */
 public class FooBarQixUtils {
 
-    public boolean isMultipleOf(Integer number, Integer factor) {
+    public static boolean isMultipleOf(Integer number, Integer factor) {
         return number % factor == 0;
     }
 }

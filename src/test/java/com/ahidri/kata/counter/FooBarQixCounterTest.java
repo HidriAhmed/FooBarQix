@@ -116,4 +116,37 @@ public class FooBarQixCounterTest {
         //then
         assertThat(result).isEqualTo("Qix0");
     }
+
+    @Test
+    public void should_replace_number_divisible_by_3_by_Foo_for_3(){
+        //given
+
+        //when
+        String result = fooBarQixCounter.returnFooIfDivisibleBy3(3);
+
+        //then
+        assertThat(result).isEqualTo("Foo");
+    }
+
+    @Test
+    public void should_replace_number_divisible_by_3_by_Foo_for_33(){
+        //given
+
+        //when
+        String result = fooBarQixCounter.returnFooIfDivisibleBy3(33);
+
+        //then
+        assertThat(result).isEqualTo("Foo");
+    }
+
+    @Test
+    public void should_replace_number_divisible_by_3_by_Foo_for_13(){
+        //given
+
+        //when
+        String result = fooBarQixCounter.returnFooIfDivisibleBy3(13);
+
+        //then
+        assertThat(result).isEmpty();
+    }
 }

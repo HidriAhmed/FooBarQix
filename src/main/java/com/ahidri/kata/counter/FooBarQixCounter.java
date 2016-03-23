@@ -1,6 +1,7 @@
 package com.ahidri.kata.counter;
 
 import com.ahidri.kata.utils.ConsoleDisplayer;
+import com.ahidri.kata.utils.FooBarQixUtils;
 
 /**
  * Created by ahidri on 23/03/16.
@@ -28,4 +29,10 @@ public class FooBarQixCounter {
         return number.replaceAll("7", "Qix");
     }
 
+    public String returnFooIfDivisibleBy3(Integer number) {
+        if(FooBarQixUtils.isMultipleOf(number, 3)){
+            return "Foo";
+        }
+        return "";
+    }
 }
