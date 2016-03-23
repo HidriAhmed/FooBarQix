@@ -149,4 +149,37 @@ public class FooBarQixCounterTest {
         //then
         assertThat(result).isEmpty();
     }
+
+    @Test
+    public void should_replace_number_divisible_by_5_by_Bar_for_5(){
+        //given
+
+        //when
+        String result = fooBarQixCounter.returnFooIfDivisibleBy5(5);
+
+        //then
+        assertThat(result).isEqualTo("Bar");
+    }
+
+    @Test
+    public void should_replace_number_divisible_by_5_by_Bar_for_55(){
+        //given
+
+        //when
+        String result = fooBarQixCounter.returnFooIfDivisibleBy5(55);
+
+        //then
+        assertThat(result).isEqualTo("Bar");
+    }
+
+    @Test
+    public void should_replace_number_divisible_by_5_by_Bar_for_51(){
+        //given
+
+        //when
+        String result = fooBarQixCounter.returnFooIfDivisibleBy5(51);
+
+        //then
+        assertThat(result).isEmpty();
+    }
 }

@@ -35,4 +35,11 @@ public class FooBarQixCounter {
         }
         return "";
     }
+
+    public String returnFooIfDivisibleBy5(Integer number) {
+        if(FooBarQixUtils.isMultipleOf(number, 5)){
+            return "Bar";
+        }
+        return "";
+    }
 }
