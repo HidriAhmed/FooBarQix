@@ -236,4 +236,48 @@ public class FooBarQixCounterTest {
         //then
         assertThat(result).isEqualTo("BarQix");
     }
+
+    @Test
+    public void should_compute_value_to_display_for_53(){
+        //given
+
+        //when
+        String result = fooBarQixCounter.computeValueToDisplay(53);
+
+        //then
+        assertThat(result).isEqualTo("BarFoo");
+    }
+
+    @Test
+    public void should_compute_value_to_display_for_13(){
+        //given
+
+        //when
+        String result = fooBarQixCounter.computeValueToDisplay(13);
+
+        //then
+        assertThat(result).isEqualTo("Foo");
+    }
+
+    @Test
+    public void should_compute_value_to_display_for_15(){
+        //given
+
+        //when
+        String result = fooBarQixCounter.computeValueToDisplay(15);
+
+        //then
+        assertThat(result).isEqualTo("FooBarBar");
+    }
+
+    @Test
+    public void should_compute_value_to_display_for_33(){
+        //given
+
+        //when
+        String result = fooBarQixCounter.computeValueToDisplay(33);
+
+        //then
+        assertThat(result).isEqualTo("FooFooFoo");
+    }
 }
