@@ -8,6 +8,13 @@ import com.ahidri.kata.utils.FooBarQixUtils;
  */
 public class FooBarQixCounter {
 
+    public static final String THREE = "3";
+    public static final String SEVEN = "7";
+    public static final String FIVE = "5";
+    public static final String FOO = "Foo";
+    public static final String BAR = "Bar";
+    public static final String QIX = "Qix";
+
     private ConsoleDisplayer consoleDisplayer = ConsoleDisplayer.getInstance();
 
     public void count() {
@@ -18,34 +25,44 @@ public class FooBarQixCounter {
     }
 
     public String replaceThreeByFoo(String number) {
-        return number.replaceAll("3", "Foo");
+        if(number.contains(THREE)){
+            return number.replaceAll(THREE, FOO);
+        }
+        return "";
+
     }
 
     public String replaceFiveByBar(String number) {
-        return number.replaceAll("5", "Bar");
+        if(number.contains(FIVE)) {
+            return number.replaceAll(FIVE, BAR);
+        }
+        return "";
     }
 
     public String replaceSevenByQix(String number) {
-        return number.replaceAll("7", "Qix");
+        if (number.contains(SEVEN)) {
+            return number.replaceAll(SEVEN, QIX);
+        }
+        return "";
     }
 
     public String returnFooIfDivisibleBy3(Integer number) {
         if(FooBarQixUtils.isMultipleOf(number, 3)){
-            return "Foo";
+            return FOO;
         }
         return "";
     }
 
     public String returnFooIfDivisibleBy5(Integer number) {
         if(FooBarQixUtils.isMultipleOf(number, 5)){
-            return "Bar";
+            return BAR;
         }
         return "";
     }
 
-    public String returnFooIfDivisibleBy7(Integer number) {
+    public String returnQixIfDivisibleBy7(Integer number) {
         if(FooBarQixUtils.isMultipleOf(number, 7)){
-            return "Qix";
+            return QIX;
         }
         return "";
     }

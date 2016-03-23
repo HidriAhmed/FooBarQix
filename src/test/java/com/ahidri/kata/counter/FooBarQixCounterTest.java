@@ -1,6 +1,5 @@
 package com.ahidri.kata.counter;
 
-import com.ahidri.kata.counter.FooBarQixCounter;
 import com.ahidri.kata.utils.ConsoleDisplayer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -188,7 +187,7 @@ public class FooBarQixCounterTest {
         //given
 
         //when
-        String result = fooBarQixCounter.returnFooIfDivisibleBy7(7);
+        String result = fooBarQixCounter.returnQixIfDivisibleBy7(7);
 
         //then
         assertThat(result).isEqualTo("Qix");
@@ -199,7 +198,7 @@ public class FooBarQixCounterTest {
         //given
 
         //when
-        String result = fooBarQixCounter.returnFooIfDivisibleBy7(77);
+        String result = fooBarQixCounter.returnQixIfDivisibleBy7(77);
 
         //then
         assertThat(result).isEqualTo("Qix");
@@ -210,7 +209,7 @@ public class FooBarQixCounterTest {
         //given
 
         //when
-        String result = fooBarQixCounter.returnFooIfDivisibleBy7(17);
+        String result = fooBarQixCounter.returnQixIfDivisibleBy7(17);
 
         //then
         assertThat(result).isEmpty();
