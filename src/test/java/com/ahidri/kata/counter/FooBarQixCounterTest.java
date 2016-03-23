@@ -25,7 +25,7 @@ public class FooBarQixCounterTest {
     private FooBarQixCounter fooBarQixCounter;
 
     @Test
-    public void should_count_from_0_to100() {
+    public void should_count_from_1_to100() {
         //given
 
 
