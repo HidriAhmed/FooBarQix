@@ -3,8 +3,6 @@ package com.ahidri.kata.utils;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 /**
  * Created by ahidri on 23/03/16.
  */
@@ -17,7 +15,7 @@ public class FooBarQixUtilsTest {
         //given
 
         //when
-        boolean result =  fooBarQixUtils.isMultipleOfThree(3);
+        boolean result =  fooBarQixUtils.isMultipleOf(3, 3);
 
         //then
         Assertions.assertThat(result).isTrue();
@@ -28,7 +26,7 @@ public class FooBarQixUtilsTest {
         //given
 
         //when
-        boolean result =  fooBarQixUtils.isMultipleOfThree(1);
+        boolean result =  fooBarQixUtils.isMultipleOf(1, 3);
 
         //then
         Assertions.assertThat(result).isFalse();
@@ -39,7 +37,7 @@ public class FooBarQixUtilsTest {
         //given
 
         //when
-        boolean result =  fooBarQixUtils.isMultipleOfFive(5);
+        boolean result =  fooBarQixUtils.isMultipleOf(5, 5);
 
         //then
         Assertions.assertThat(result).isTrue();
@@ -50,7 +48,7 @@ public class FooBarQixUtilsTest {
         //given
 
         //when
-        boolean result =  fooBarQixUtils.isMultipleOfFive(1);
+        boolean result =  fooBarQixUtils.isMultipleOf(1, 5);
 
         //then
         Assertions.assertThat(result).isFalse();

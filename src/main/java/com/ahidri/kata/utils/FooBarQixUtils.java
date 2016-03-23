@@ -5,11 +5,7 @@ package com.ahidri.kata.utils;
  */
 public class FooBarQixUtils {
 
-    public boolean isMultipleOfThree(Integer number) {
-        return number % 3 == 0;
-    }
-
-    public boolean isMultipleOfFive(Integer number) {
-        return number % 5 == 0;
+    public boolean isMultipleOf(Integer number, Integer factor) {
+        return number % factor == 0;
     }
 }
