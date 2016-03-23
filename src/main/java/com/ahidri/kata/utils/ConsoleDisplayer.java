@@ -7,6 +7,8 @@ public class ConsoleDisplayer {
 
     private static final ConsoleDisplayer instance = new ConsoleDisplayer();
 
+    private ConsoleDisplayer(){}
+
     public static ConsoleDisplayer getInstance(){
         return instance;
     }
