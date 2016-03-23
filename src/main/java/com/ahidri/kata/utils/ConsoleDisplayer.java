@@ -16,8 +16,4 @@ public class ConsoleDisplayer {
     public void display(String msgToDisplay){
         System.out.println(msgToDisplay);
     }
-
-    public void display(Integer intToDisplay){
-        display(intToDisplay.toString());
-    }
 }

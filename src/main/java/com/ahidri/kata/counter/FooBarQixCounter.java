@@ -19,7 +19,8 @@ public class FooBarQixCounter {
 
     public void count() {
         for (Integer i = 1; i <= 100; i++) {
-            consoleDisplayer.display(i);
+            String valueToDisplay = computeValueToDisplay(i);
+            consoleDisplayer.display(valueToDisplay);
         }
 
     }
@@ -47,7 +48,7 @@ public class FooBarQixCounter {
     }
 
     String replaceDigitByCorrespondingConstant(Integer number){
-        String result = "";
+        String result;
         if(number < 40){
             result = replaceThreeByFoo(number.toString())
                     + replaceFiveByBar(number.toString())

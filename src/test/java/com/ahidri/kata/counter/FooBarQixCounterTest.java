@@ -7,6 +7,7 @@ import org.mockito.*;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
@@ -32,9 +33,7 @@ public class FooBarQixCounterTest {
         fooBarQixCounter.count();
 
         //then
-        for (Integer i = 1; i <= 100; i++) {
-            verify(consoleDisplayer, times(1)).display(i);
-        }
+            verify(consoleDisplayer, times(100)).display(anyString());
     }
 
     @Test
@@ -46,8 +45,8 @@ public class FooBarQixCounterTest {
         fooBarQixCounter.count();
 
         //then
-        verify(consoleDisplayer, never()).display(AdditionalMatchers.geq(new Integer(101)));
-        verify(consoleDisplayer, never()).display(AdditionalMatchers.leq(new Integer(0)));
+        verify(consoleDisplayer, never()).display("101");
+        verify(consoleDisplayer, never()).display("0");
     }
 
     @Test
