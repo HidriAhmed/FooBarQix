@@ -52,7 +52,7 @@ public class FooBarQixCounterTest {
     }
 
     @Test
-    public void should_replace_number_divisible_by_3_by_Foo_for_33(){
+    public void should_replace_3_by_Foo_for_33(){
         //given
 
         //when
@@ -63,7 +63,7 @@ public class FooBarQixCounterTest {
     }
 
     @Test
-    public void should_replace_number_divisible_by_3_by_Foo_for_13(){
+    public void should_3_by_Foo_for_13(){
         //given
 
         //when
@@ -71,5 +71,27 @@ public class FooBarQixCounterTest {
 
         //then
         assertThat(result).isEqualTo("1Foo");
+    }
+
+    @Test
+    public void should_5_by_Foo_bar_55(){
+        //given
+
+        //when
+        String result = fooBarQixCounter.replaceFiveByBar("55");
+
+        //then
+        assertThat(result).isEqualTo("BarBar");
+    }
+
+    @Test
+    public void should_replace_5_by_Bar_for_50(){
+        //given
+
+        //when
+        String result = fooBarQixCounter.replaceFiveByBar("50");
+
+        //then
+        assertThat(result).isEqualTo("Bar0");
     }
 }
