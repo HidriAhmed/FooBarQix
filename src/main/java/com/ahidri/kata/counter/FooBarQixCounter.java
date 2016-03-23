@@ -9,10 +9,9 @@ public class FooBarQixCounter {
 
     private ConsoleDisplayer consoleDisplayer = ConsoleDisplayer.getInstance();
 
-
     public void count() {
         for (Integer i = 1; i <= 100; i++) {
-            consoleDisplayer.display(i.toString());
+            consoleDisplayer.display(i);
         }
 
     }
