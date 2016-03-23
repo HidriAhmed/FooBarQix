@@ -8,4 +8,8 @@ public class FooBarQixUtils {
     public boolean isMultipleOfThree(Integer number) {
         return number % 3 == 0;
     }
+
+    public boolean isMultipleOfFive(Integer number) {
+        return number % 5 == 0;
+    }
 }
