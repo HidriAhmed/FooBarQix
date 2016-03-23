@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.mockito.*;
 import org.mockito.runners.MockitoJUnitRunner;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
@@ -48,5 +49,27 @@ public class FooBarQixCounterTest {
         //then
         verify(consoleDisplayer, never()).display(AdditionalMatchers.geq(new Integer(101)));
         verify(consoleDisplayer, never()).display(AdditionalMatchers.leq(new Integer(0)));
+    }
+
+    @Test
+    public void should_replace_number_divisible_by_3_by_Foo_for_33(){
+        //given
+
+        //when
+        String result = fooBarQixCounter.replaceThreeByFoo("33");
+
+        //then
+        assertThat(result).isEqualTo("FooFoo");
+    }
+
+    @Test
+    public void should_replace_number_divisible_by_3_by_Foo_for_13(){
+        //given
+
+        //when
+        String result = fooBarQixCounter.replaceThreeByFoo("13");
+
+        //then
+        assertThat(result).isEqualTo("1Foo");
     }
 }

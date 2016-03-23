@@ -15,4 +15,8 @@ public class FooBarQixCounter {
         }
 
     }
+
+    public String replaceThreeByFoo(String number) {
+        return number.replaceAll("3", "Foo");
+    }
 }
