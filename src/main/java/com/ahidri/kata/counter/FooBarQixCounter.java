@@ -23,4 +23,9 @@ public class FooBarQixCounter {
     public String replaceFiveByBar(String number) {
         return number.replaceAll("5", "Bar");
     }
+
+    public String replaceSevenByQix(String number) {
+        return number.replaceAll("7", "Qix");
+    }
+
 }

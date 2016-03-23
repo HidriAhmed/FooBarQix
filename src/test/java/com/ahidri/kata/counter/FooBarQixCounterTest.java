@@ -74,7 +74,7 @@ public class FooBarQixCounterTest {
     }
 
     @Test
-    public void should_5_by_Foo_bar_55(){
+    public void should_5_by_Foo_for_55(){
         //given
 
         //when
@@ -93,5 +93,27 @@ public class FooBarQixCounterTest {
 
         //then
         assertThat(result).isEqualTo("Bar0");
+    }
+
+    @Test
+    public void should_7_by_Qix_for_77(){
+        //given
+
+        //when
+        String result = fooBarQixCounter.replaceSevenByQix("77");
+
+        //then
+        assertThat(result).isEqualTo("QixQix");
+    }
+
+    @Test
+    public void should_replace_7_by_Qix_for_70(){
+        //given
+
+        //when
+        String result = fooBarQixCounter.replaceSevenByQix("70");
+
+        //then
+        assertThat(result).isEqualTo("Qix0");
     }
 }
