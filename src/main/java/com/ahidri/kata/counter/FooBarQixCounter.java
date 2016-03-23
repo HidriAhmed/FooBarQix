@@ -42,4 +42,11 @@ public class FooBarQixCounter {
         }
         return "";
     }
+
+    public String returnFooIfDivisibleBy7(Integer number) {
+        if(FooBarQixUtils.isMultipleOf(number, 7)){
+            return "Qix";
+        }
+        return "";
+    }
 }

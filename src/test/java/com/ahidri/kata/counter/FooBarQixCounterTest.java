@@ -182,4 +182,37 @@ public class FooBarQixCounterTest {
         //then
         assertThat(result).isEmpty();
     }
+
+    @Test
+    public void should_replace_number_divisible_by_7_by_Bar_for_7(){
+        //given
+
+        //when
+        String result = fooBarQixCounter.returnFooIfDivisibleBy7(7);
+
+        //then
+        assertThat(result).isEqualTo("Qix");
+    }
+
+    @Test
+    public void should_replace_number_divisible_by_7_by_Qix_for_77(){
+        //given
+
+        //when
+        String result = fooBarQixCounter.returnFooIfDivisibleBy7(77);
+
+        //then
+        assertThat(result).isEqualTo("Qix");
+    }
+
+    @Test
+    public void should_replace_number_divisible_by_7_by_Qix_for_17(){
+        //given
+
+        //when
+        String result = fooBarQixCounter.returnFooIfDivisibleBy7(17);
+
+        //then
+        assertThat(result).isEmpty();
+    }
 }
